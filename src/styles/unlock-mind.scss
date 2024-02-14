@@ -1,0 +1,181 @@
+.unlock-mind {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+    .unlock-wrap {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        .left-container {
+            width: 60%;
+
+            .unlock-title {
+                color: #2D4F44;
+                
+                font-size: 35px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                text-transform: capitalize;
+            }
+
+            .mind {
+                color: var(--Color-1, #69A6D1);
+                
+             
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                text-transform: capitalize;
+            }
+
+            .neuropsychological {
+                background: var(--GD-Main, linear-gradient(90deg, #69A6D1 0.79%, #9EADC3 30.39%, #99CA91 75.27%));
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                
+           
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                text-transform: capitalize;
+            }
+
+            .user-count-main-wrap {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+
+                .user-list-img {
+                    height: 50px;
+                }
+
+
+                .user-count-wrapper {
+                    .user-count {
+                        text-align: center;
+                        font-size: 30px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                        text-transform: capitalize;
+                        background: var(--GD-Main, linear-gradient(90deg, #69A6D1 0.79%, #9EADC3 30.39%, #99CA91 75.27%));
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+
+                }
+            }
+
+
+            .send-btn {
+                font-size: 16px;
+                height: 40px;
+                border-radius: 5px;
+                display: flex;
+                gap: 10px;
+                margin-top: 20px;
+                background: linear-gradient(90deg, #69A6D1 0.79%, #9EADC3 30.39%, #99CA91 75.27%);
+            }
+        }
+
+        .right-container {
+            width: 40%;
+        }
+    }
+
+    .cogquiz-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+
+        .cozquiz-title {
+            text-align: center;
+            
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            text-transform: uppercase;
+            background: var(--GD-Main, linear-gradient(90deg, #69A6D1 0.79%, #9EADC3 30.39%, #99CA91 75.27%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+        }
+
+        .cozquiz-subtitle {
+            text-align: center;
+            
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            text-transform: uppercase;
+            color: #2D4F44;
+            
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            text-transform: capitalize;
+        }
+    }
+
+    .cogquiz-wrap {
+        display: grid;
+        grid-template-columns: 450px 450px;
+        grid-column-gap: 38px;
+        grid-row-gap: 38px;
+        justify-content: center;
+    }
+
+    .cogquiz-container {
+        display: flex;
+        width: 446px;
+        height: 312px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        border: 1px solid #DFEAEF;
+
+        .cogquiz-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 12px;
+
+            .cogquiz-title {
+                color: var(--Color-1, #69A6D1);
+                text-align: center;
+                
+                font-size: 21.803px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                text-transform: capitalize;
+            }
+
+            .cogquiz-subtitle {
+                width: 399px;
+                color: #605A5A;
+                text-align: center;
+                
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                text-transform: capitalize;
+            }
+        }
+    }
+
+}

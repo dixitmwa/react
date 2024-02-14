@@ -1,0 +1,110 @@
+.fixed-footer-wrap {
+    // background-image: url(../assets/footer-image.png) !important;
+
+    .footer-insideWrap {
+        position: absolute;
+        width: 100%;
+    }
+
+    .footer-image {
+        position: absolute;
+        // bottom: 40px;
+        z-index: -1;
+    }
+
+    .footer-top {
+        display: flex;
+        padding: 0 110px;
+        gap: 100px;
+        margin-top: 50px;
+
+        .bar-logo {
+            width: 304px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .logo-text {
+                color: #605A5A;
+                // 
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                text-transform: capitalize;
+            }
+        }
+
+        .bar-menu-item {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 11px;
+
+            a{
+                text-decoration: none;
+            }
+
+
+            .primary-text>span {
+                color: #2D4F44;
+                // 
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                letter-spacing: 0.9px;
+                cursor: default;
+
+            }
+
+            span {
+                color: #2D4F44;
+                // 
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 0.78px;
+                cursor: pointer;
+
+            }
+
+        }
+    }
+
+    .footer-bottom {
+        display: flex;
+        padding: 0 110px;
+        margin-top: 30px 0;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .share-icons{
+            display: flex;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .follow-us-text {
+            color: var(--Color-1, #69A6D1);
+            
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .copyright-text {
+            color: var(--Color-1, #69A6D1);
+            text-align: right;
+            /* Body 1 mobile */
+            // font-family: Roboto;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+
+}

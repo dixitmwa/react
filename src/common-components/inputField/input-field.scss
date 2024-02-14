@@ -1,0 +1,22 @@
+.input-label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+
+}
+
+.input-field-component {
+    .MuiInputBase-root {
+        height: 37px;
+        border-radius: 6px;
+        .input{
+            padding: 0 0 0 14px;
+        }
+    }
+}
+
+.input-date-picker{
+    .MuiInputBase-root{
+        height: 37px;
+    }
+}

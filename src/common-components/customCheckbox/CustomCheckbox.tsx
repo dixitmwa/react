@@ -1,0 +1,20 @@
+import React from 'react'
+import { Checkbox, FormControlLabel, FormGroup } from '@mui/material'
+
+const CustomCheckbox = (props: any) => {
+    const { selectedValues, onChange, selectedId } = props
+
+    return (
+        <FormGroup className="custom-checkbox">
+            {selectedValues.map((value: any, index: number) => (
+                <FormControlLabel
+                    key={index}
+                    control={<Checkbox checked={value.selected} onChange={() => onChange(selectedId, index)} />}
+                    label={value.label}
+                />
+            ))}
+        </FormGroup>
+    )
+}
+
+export default CustomCheckbox

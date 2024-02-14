@@ -1,0 +1,79 @@
+// #app-header {
+//     background-color: #fff;
+//     border: solid 1px #000;
+//     color: #000;
+//     .MuiButtonBase-root {
+//         color: #000;
+//     }
+// }
+
+.fixed-header-wrap {
+    position: fixed;
+    left: 0px;
+    top: 20px;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: none;
+    background-color: transparent;
+
+    .header-link {
+        color: inherit;
+        text-decoration: inherit;
+    }
+
+    .inner-header-wrap {
+        border-radius: 7px;
+        background: rgba(255, 255, 255, 0.44);
+        box-shadow: 0px 0px 3.8px 0px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 26px;
+    }
+
+    .header-container {
+        max-width: 1350px;
+    }
+
+    .menu-list-wrap {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin: 0 30px;
+
+        .menu-title-list-wrap {
+            text-decoration: none;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            cursor: pointer;
+            color: #000;
+            text-transform: capitalize;
+            padding: 0px;
+        }
+
+    }
+    .login-btn-warp {
+        background-color: #69A6D1;
+        color: #fff;
+        border-radius: 6px;
+        padding: 9px 15px;
+        gap: 10px;
+        text-transform: capitalize;
+        .img{
+            width: 14px;
+        }
+    }
+    .logout-btn-warp {
+        background-color: #DB3C3C;
+        color: #fff;
+        border-radius: 6px;
+        padding: 9px 15px;
+        gap: 10px;
+        text-transform: capitalize;
+        .img{
+            width: 14px;
+        }
+    }
+}

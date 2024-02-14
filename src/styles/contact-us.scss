@@ -1,0 +1,45 @@
+.contact-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 200px;
+    align-items: center;
+    .any-query {
+        color: #2D4F44;
+        
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: capitalize;
+    }
+
+    .write-message {
+        background: var(--GD-Main, linear-gradient(90deg, #69A6D1 0.79%, #9EADC3 30.39%, #99CA91 75.27%));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: capitalize;
+    }
+
+    .contact-us-form {
+        margin-top: 25px;
+        display: flex;
+        width: 370px;
+        gap: 20px;
+
+        .send-btn {
+            font-size: 16px;
+            width: 207px;
+            height: 49px;
+            flex-shrink: 0;
+            border-radius: 5px;
+            background: linear-gradient(90deg, #69A6D1 0.79%, #9EADC3 30.39%, #99CA91 75.27%);
+          }
+    }
+}

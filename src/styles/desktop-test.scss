@@ -1,0 +1,86 @@
+.desktop-wrap {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+    align-items: center;
+    gap: 6px;
+
+    .desktop-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .typo-text {
+            color: #2D4F44;
+            
+            font-size: 39.245px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            text-transform: capitalize;
+        }
+
+        .typo-color-text {
+            background: var(--GD-Main, linear-gradient(90deg, #69A6D1 0.79%, #9EADC3 30.39%, #99CA91 75.27%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            
+            font-size: 39.245px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            text-transform: capitalize;
+        }
+    }
+
+    .desktop-feedback {
+        border-radius: 5px;
+        border: 1px solid #C4D1D7;
+        background: rgba(255, 255, 255, 0.31);
+        backdrop-filter: blur(2.5px);
+        margin-top: 60px;
+
+        .buynow-btn {
+            border-radius: 5px;
+            background: var(--Color-1, #69A6D1);
+        }
+
+        .feedback-info{
+            margin: 10px 0 24px 24px;
+
+            .heading-feedback {
+                
+                font-size: 25px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                text-transform: capitalize;
+                background: var(--GD-Main, linear-gradient(90deg, #69A6D1 0.79%, #9EADC3 30.39%, #99CA91 75.27%));
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .feedback-message{
+                color: #605A5A;
+                
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                text-transform: capitalize;
+                width: 550px;
+                padding: 16px 0
+            }
+
+            .ellipse-ball{
+                position: absolute;
+                right: 10px;
+                bottom: -50px;
+            }
+        }
+
+    }
+
+
+}
