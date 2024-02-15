@@ -49,6 +49,7 @@ const TestCategories = () => {
 
             <Box id="available-test" className="all-available-test" position={"absolute"}>
                 <Box className="ab-bg-dot-wrap">
+			 {/* eslint-disable @next/next/no-img-element */}
                     <img src={DotWave.src} alt="dot" />
                 </Box>
                 <Box className="image-section">

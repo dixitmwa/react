@@ -54,6 +54,7 @@ const Footer = () => {
 				</Box>
 			</Box>
 			<Box className="footer-image">
+			 {/* eslint-disable @next/next/no-img-element */}
 				<img height={50} src={FooterImage.src} alt="footer-wave" />
 			</Box>
 		</Box>

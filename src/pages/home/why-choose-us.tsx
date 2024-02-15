@@ -39,6 +39,7 @@ const WhyChooseUs = () => {
                         return (
                             <Container key={data.id} className="carousel-container">
                                 <Box overflow={"hidden"}>
+			 {/* eslint-disable @next/next/no-img-element */}
                                     <img className="carousel-wave" src={HalfWave.src} alt="" />
                                     <Box className="carousel-header">
                                         <Box>
