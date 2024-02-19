@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import AppBar from '@mui/material/AppBar';
-import { Link } from '@mui/material';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container'
 import Button from '@mui/material/Button';
 import Logo from "../assets/logo/logo.png";
 import LoginIcon from "../assets/login-icon.png"
 import LogoutIcon from "../assets/logout.png"
+import Link from 'next/link';
 
 const Header = () => {
   const router = useRouter()
@@ -33,15 +33,15 @@ const Header = () => {
           </Box>
           <Box className="menu-list-wrap">
             <Link className="menu-title-list-wrap" href="/">Home</Link>
-            <Link className="menu-title-list-wrap " href="/#about">About</Link>
-            <Link className="menu-title-list-wrap " href="/#test-category">Test Categories</Link>
-            <Link className="menu-title-list-wrap " href="/#available-test">Available Tests</Link>
-            <Link className="menu-title-list-wrap " href="/#custom-test">Custom Tests</Link>
-            <Link className="menu-title-list-wrap " href="/#desktop-test">Desktop Tests</Link>
-            <Link className="menu-title-list-wrap " href="/#connect">Connect</Link>
+            <Link className="menu-title-list-wrap" href="/#about">About</Link>
+            <Link className="menu-title-list-wrap" href="/#test-category">Test Categories</Link>
+            <Link className="menu-title-list-wrap" href="/#available-test">Available Tests</Link>
+            <Link className="menu-title-list-wrap" href="/#custom-test">Custom Tests</Link>
+            <Link className="menu-title-list-wrap" href="/#desktop-test">Desktop Tests</Link>
+            <Link className="menu-title-list-wrap" href="/#connect">Connect</Link>
             {
               user &&
-              <Link className="menu-title-list-wrap " href="/profile?tab=user-profile">Profile</Link>
+              <Link className="menu-title-list-wrap" href="/profile?tab=user-profile">Profile</Link>
             }
           </Box>
           {!user ? <Button className='login-btn-warp' onClick={() => router.push('/auth/login')} >
@@ -57,3 +57,4 @@ const Header = () => {
 };
 
 export default Header;  
+

@@ -1,5 +1,5 @@
 import Layout from '@/components/layout'
-import { Box,  Container, Grid, Typography } from '@mui/material'
+import { Box, Container, Grid, Typography } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import ProfileHeader from './profileHeader'
 import UserProfileImg from '../../assets/user-profile.png'
@@ -12,6 +12,7 @@ import YourTest from '@/components/yourTest';
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import FullScreenLoader from '@/common-components/fullScreenLoader'
+import ProtectedRoute from '../auth/ProtectedRoute'
 
 const ProfileDetails = () => {
     const router = useRouter()
@@ -68,34 +69,34 @@ const ProfileDetails = () => {
 
 
     return (
-        <Layout title="Profile | Next.js App" footer>
-            <Container className='main-container'>
-                {currentNav?.id ? <>
-                    <ProfileHeader currentNav={currentNav} />
-                    <Box>
-                        <Grid container spacing={2}>
-                            <Grid item xs={2.5} lg={3} xl={2.3}>
-                                <Box className="nav-menu">
-                                    {navMenu.map((item) => {
-                                        const isActive: any = item?.url === tab
-                                        return (
-                                            <Box className="nav-item" color={isActive && "#69A6D1"} key={item.id} onClick={() => handleNavClick(item)}>
-                                                <Image height={36} width={36} src={item.img.src} alt={item.title} />
-                                                <Typography>{item.title}</Typography>
-                                                <KeyboardArrowRightIcon />
-                                            </Box>
-                                        )
-                                    })}
-                                </Box>
+            <Layout title="Profile | CozQuiz" footer>
+                <Container className='main-container'>
+                    {currentNav?.id ? <>
+                        <ProfileHeader currentNav={currentNav} />
+                        <Box>
+                            <Grid container spacing={2}>
+                                <Grid item xs={2.5} lg={3} xl={2.3}>
+                                    <Box className="nav-menu">
+                                        {navMenu.map((item) => {
+                                            const isActive: any = item?.url === tab
+                                            return (
+                                                <Box className="nav-item" color={isActive && "#69A6D1"} key={item.id} onClick={() => handleNavClick(item)}>
+                                                    <Image height={36} width={36} src={item.img.src} alt={item.title} />
+                                                    <Typography>{item.title}</Typography>
+                                                    <KeyboardArrowRightIcon />
+                                                </Box>
+                                            )
+                                        })}
+                                    </Box>
+                                </Grid>
+                                <Grid item xs={9.5} lg={9} xl={9.7}>
+                                    {renderComponent()}
+                                </Grid>
                             </Grid>
-                            <Grid item xs={9.5} lg={9} xl={9.7}>
-                                {renderComponent()}
-                            </Grid>
-                        </Grid>
-                    </Box>
-                </> : <FullScreenLoader />}
-            </Container>
-        </Layout>
+                        </Box>
+                    </> : <FullScreenLoader />}
+                </Container>
+            </Layout>
     )
 }
 

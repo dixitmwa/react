@@ -14,7 +14,6 @@
 
             .unlock-title {
                 color: #2D4F44;
-                
                 font-size: 35px;
                 font-style: normal;
                 font-weight: 600;
@@ -178,4 +177,11 @@
         }
     }
 
+}
+
+.ellipse-ball-test{
+    position: absolute;
+    bottom: 120px;
+    right: 320px;
+    transform: rotate(45deg);
 }

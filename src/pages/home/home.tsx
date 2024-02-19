@@ -6,7 +6,6 @@ import UnlockMind from "./unlock-mind";
 import WhyChooseUs from "./why-choose-us";
 
 const HomePage = () => {
-
 	return (
 		<Box id="home">
 			<UnlockMind />

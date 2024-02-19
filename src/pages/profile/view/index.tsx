@@ -19,7 +19,7 @@ const View = () => {
   ]
 
   return (
-    <Layout title="Profile | Next.js App" footer>
+    <Layout title="Profile | CozQuiz" footer>
       <Container className='main-container'>
         <Box display={"flex"} color={"#2D4F44"} style={{
           cursor: "pointer",

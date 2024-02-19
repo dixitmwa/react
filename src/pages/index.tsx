@@ -3,8 +3,8 @@ import HomePage from "./home/home";
 
 export default function Home() {
   return (
-      <Layout title="Home | Next.js App" footer>
-          <HomePage />
+      <Layout title="Home | CozQuiz" footer margintop={25}>
+        <HomePage />
       </Layout>
   );
 }

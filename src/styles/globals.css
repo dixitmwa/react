@@ -39,3 +39,25 @@
 .css-11xur9t-MuiPaper-root-MuiTableContainer-root{
   box-shadow: 0px 0px 1px -1px rgba(0,0,0,0.2), 0px 0px 1px 0px rgba(0,0,0,0.14), 0px 0px 3px 0px rgba(0,0,0,0.12)
 }
+
+.background-wave{
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  
+}
+
+.background-ellipse{
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.ellipse-ball{
+  position: absolute;
+  bottom: 115px;
+  right: 175px;
+  transform: rotate(45deg);
+}

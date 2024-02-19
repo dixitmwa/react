@@ -7,6 +7,8 @@ import { Player } from '@lottiefiles/react-lottie-player';
 import AnimationSlider from '../../assets/slider-1.json'
 import { constantData } from "@/constant/constant";
 import Image from "next/image";
+import EllipseBall from '../../assets/Ellipse-ball.png'
+import BackgroundWave from "@/components/backgroundWave";
 
 
 const UnlockMind = () => {
@@ -15,6 +17,7 @@ const UnlockMind = () => {
         <Box className="unlock-mind" pt={3}>
             <Container className="main-container">
                 <Box className="unlock-wrap">
+                      {/* <BackgroundWave margintop={25} /> */}
                     <Box className="left-container">
                         <Box>
                             <Typography className="unlock-title" variant="h3">
@@ -54,6 +57,7 @@ const UnlockMind = () => {
                         </Typography>
                     </Box>
                     <Box className="cogquiz-wrap">
+
                         {
                             constantData.map((data) => {
                                 return (
@@ -68,6 +72,9 @@ const UnlockMind = () => {
                                 )
                             })
                         }
+                        <Box className="ellipse-ball-test">
+                            <Image height={125} width={125} src={EllipseBall.src} alt="ellipse-ball" />
+                        </Box>
                     </Box>
                 </Box>
             </Container>

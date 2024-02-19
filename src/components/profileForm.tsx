@@ -53,7 +53,7 @@ const ProfileForm = () => {
       <Box className="profile-form-layout">
         <Typography fontSize={13} fontWeight={600}>Please fill out the form to ensure the most accurate scoring results for the test. Required fields are marked with *</Typography>
         <Typography variant='body1' fontSize={12} mt={1.5}>To utilize the assessments on this site you need to read and agree to the conditions for taking any of the assessments provided by CogQuiz.com. The tests on this site are considered and provided solely as experimental assessments. They are not clinically or medically diagnostic or for use in treating or preventing clinical of medical conditions. If you have questions or concerns about the results or our reporting of your results on any assessment taken on this site, you may want to print your results and discuss them with a licensed medical of psychological professional. CogQuiz.com, CogQuiz, LLC, or the owners of this company and/or website are not responsible for any errors or misinterpretation of the results by users of this website and assessments. By checking accept below you are acknowledging that you have read and understood the conditions for taking any assessment provided on this website.</Typography>
-        <FormControlLabel control={<Checkbox size="small" />} label="I Have Read and Understood" />
+        <FormControlLabel control={<Checkbox size="small" />} label={<Typography className='checkbox-label' >I have read and understood</Typography>} />
         <Box>
           {/* personal details */}
           <Grid container xs={9} rowSpacing={2} columnSpacing={3} mt={2}>

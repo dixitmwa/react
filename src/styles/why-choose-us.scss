@@ -3,6 +3,7 @@
     justify-content: center;
     flex-direction: column;
     margin-bottom: 80px;
+    margin-top: 40px;
 
     .choose-us-header {
         display: flex;
@@ -12,7 +13,7 @@
 
         .choose-us-title {
             color: #2D4F44;
-            
+
             font-size: 39.245px;
             font-style: normal;
             font-weight: 600;
@@ -25,7 +26,7 @@
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            
+
             font-size: 39.245px;
             font-style: normal;
             font-weight: 600;
@@ -46,7 +47,7 @@
         }
     }
 
-    .carousel-btn{
+    .carousel-btn {
         display: flex;
         justify-content: space-between;
         position: relative;
@@ -58,6 +59,7 @@
     .carousel-warpper {
         display: flex;
         gap: 20px;
+        position: relative;
 
         .carousel-container {
             width: 395px;
@@ -71,7 +73,7 @@
             .carousel-wave {
                 position: absolute;
                 right: 0px;
-                z-index: -1px;
+                z-index: -1;
             }
 
             .carousel-data {
@@ -99,7 +101,7 @@
 
                 .carousel-title {
                     color: #2D4F44;
-                    
+
                     font-size: 25px;
                     font-style: normal;
                     font-weight: 600;
@@ -112,7 +114,7 @@
                     background-clip: text;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
-                    
+
                     font-size: 25px;
                     font-style: normal;
                     font-weight: 600;
@@ -130,4 +132,18 @@
             height: 350px;
         }
     }
+}
+
+
+.ellipse-ball-left {
+    position: absolute;
+    left: 150px;
+    bottom: -50px;
+    transform: rotate(45deg);
+}
+
+.ellipse-ball-right {
+    position: absolute;
+    right: 350px;
+    top: -50px;
 }

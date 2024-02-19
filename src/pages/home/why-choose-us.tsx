@@ -7,6 +7,7 @@ import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import { carouselData } from "@/constant/constant";
 import Image from "next/image";
+import EllipseBall from '../../assets/Ellipse-ball.png'
 
 
 const WhyChooseUs = () => {
@@ -18,15 +19,11 @@ const WhyChooseUs = () => {
 
     return (
         <Box id="custom-test" className="why-choose-us-wrap" >
-            <Container className="main-container">
-
-
                 <Box className="choose-us-header">
                     <Image height={98} width={106} src={HeadReact.src} alt="Head react" />
                     <Typography variant="subtitle1" className="choose-us-title">Why <span className="choose">Choose</span> Us</Typography>
                     <Typography variant="subtitle1" className="choose-us-subtitle">Understand Your Brain and Boost Your Potential. <br /> Discover Your Cognitive Profile.</Typography>
                 </Box>
-
 
                 <Box className="carousel-btn">
                     <ArrowCircleLeftIcon onClick={shiftLeft} fontSize="medium" />
@@ -39,8 +36,7 @@ const WhyChooseUs = () => {
                         return (
                             <Container key={data.id} className="carousel-container">
                                 <Box overflow={"hidden"}>
-			 {/* eslint-disable @next/next/no-img-element */}
-                                    <img className="carousel-wave" src={HalfWave.src} alt="" />
+                                    <Image height={100} width={100} layout="responsive" className="carousel-wave" src={HalfWave.src} alt="" />
                                     <Box className="carousel-header">
                                         <Box>
                                             <Image height={50} width={50} src={BlueCircle.src} alt="" />
@@ -55,9 +51,15 @@ const WhyChooseUs = () => {
                             </Container>
                         )
                     })}
-
+                    <Box>
+                        <Box className="ellipse-ball-left">
+                            <Image height={98} width={98} src={EllipseBall.src} alt="EllipseBall" />
+                        </Box>
+                        <Box className='ellipse-ball-right'>
+                            <Image height={98} width={98} src={EllipseBall.src} alt="EllipseBall" />
+                        </Box>
+                    </Box>
                 </Box>
-            </Container>
         </Box>
     );
 };

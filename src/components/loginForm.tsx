@@ -41,10 +41,10 @@ const LoginForm = () => {
     return (
         <Container className='form-container'>
             <Box className="form-details">
-                <Typography variant="h3" display={"flex"} justifyContent={"center"}>
+                <Typography className='auth-title' variant="h3">
                     Login
                 </Typography>
-                <Typography variant="body1" display={"flex"} justifyContent={"center"}>
+                <Typography variant="body1" textAlign={"center"}>
                     Don’t have an account? <Link className='auth-link' href={"/auth/register"}> Sign up </Link>
                 </Typography>
 

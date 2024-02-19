@@ -1,11 +1,12 @@
 import Image from "next/image";
-import { Box, Link, List, ListItemText, Typography } from "@mui/material";
+import { Box, List, ListItemText, Typography } from "@mui/material";
 import FooterImage from "../assets/footer-image.png";
 import Logo from '../assets/logo/logo.png'
 import FacebookIcon from '../assets/socialIcon/facebook.png'
 import LinkedinIcon from '../assets/socialIcon/Linkedin.png'
 import YoutubeIcon from '../assets/socialIcon/youtube.png'
 import InstaIcon from '../assets/socialIcon/Insta.png'
+import Link from "next/link";
 
 const Footer = () => {
 	return (
@@ -49,13 +50,12 @@ const Footer = () => {
 						</Box>
 					</Box>
 					<Box>
-						<Typography className="copyright-text">Copyright © 2024 quizCog. All Rights Reserved.</Typography>
+						<Typography className="copyright-text">Copyright © 2024 CogQuiz. All Rights Reserved.</Typography>
 					</Box>
 				</Box>
 			</Box>
 			<Box className="footer-image">
-			 {/* eslint-disable @next/next/no-img-element */}
-				<img height={50} src={FooterImage.src} alt="footer-wave" />
+				<Image width={100} layout="responsive" height={50} src={FooterImage.src} alt="footer-wave" />
 			</Box>
 		</Box>
 	);

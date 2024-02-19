@@ -49,14 +49,13 @@ const TestCategories = () => {
 
             <Box id="available-test" className="all-available-test" position={"absolute"}>
                 <Box className="ab-bg-dot-wrap">
-			 {/* eslint-disable @next/next/no-img-element */}
-                    <img src={DotWave.src} alt="dot" />
+                    <Image width={100} height={100} layout="responsive" src={DotWave.src} alt="dot" />
                 </Box>
                 <Box className="image-section">
                     <Image height={119} width={98} src={QuizImg.src} alt="quiz" />
                     <Typography className="available-test-title" variant="h5">
                         All
-                        <span className="custom-style-title"> Available Test</span>
+                        <span className="custom-style-title">Available Test</span>
                     </Typography>
                 </Box>
                 <Box>

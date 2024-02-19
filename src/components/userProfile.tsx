@@ -24,7 +24,7 @@ const UserProfile = () => {
             <Box className="profile-details">
                 <Box className="profile-section">
                     <Box className="profile-image-section">
-                        <Typography variant='subtitle1' >Profile Picture</Typography>
+                        <Typography className='title' variant='subtitle1'>Profile Picture</Typography>
                         <Box className="profile-update">
                             <Avatar className='profile-image' />
                             <Image width={20} height={20} src={EditIcon.src} alt="edit" />
@@ -32,13 +32,13 @@ const UserProfile = () => {
                         </Box>
                     </Box>
                     <Box className="profile-details-section">
-                        <Typography >User name: <span className='details-value'>admin</span></Typography>
-                        <Typography >Email: <span className='details-value'>test@gmail.com</span></Typography>
-                        <Typography >Age: <span className='details-value'>34</span></Typography>
+                        <Typography className='title' >User name: <span className='details-value'>admin</span></Typography>
+                        <Typography className='title'>Email: <span className='details-value'>test@gmail.com</span></Typography>
+                        <Typography className='title' >Age: <span className='details-value'>34</span></Typography>
                     </Box>
                 </Box>
                 <Box className="upload-result">
-                    <Typography  >Upload Result</Typography>
+                    <Typography className='title' >Upload Result</Typography>
                     <DropzoneArea
                         onChange={(files) => console.log('Files:', files)}
                         dropzoneText='Click or drag file to this area to upload'
@@ -49,7 +49,7 @@ const UserProfile = () => {
                     </Box>
                 </Box>
                 <Box className="provider-code-wrap">
-                    <Typography>Provider Code</Typography>
+                    <Typography className='title'>Provider Code</Typography>
                     <Box className="provider-code">c7a5014f-aa23-4634-8e82-1f98fb337fb8</Box>
                 </Box>
                 <Box textAlign={"end"}>

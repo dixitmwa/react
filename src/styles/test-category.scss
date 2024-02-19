@@ -10,6 +10,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom: 20px;
 
         .text-cat-title {
             font-size: 39.245px;
@@ -185,7 +186,7 @@
 .ab-bg-dot-wrap{
     position: absolute;
     left: 0px;
-    top: 0px;
+    top: -50px;
     width: 100%;
     z-index: -1;
 }

@@ -33,14 +33,14 @@ const RegisterForm = () => {
     return (
         <Container className='form-container'>
             <Box className="form-details">
-                <Typography variant="h3" display={"flex"} justifyContent={"center"}>
+                <Typography className='auth-title' variant="h3">
                     Signup
                 </Typography>
-                <Typography variant="body1" display={"flex"} justifyContent={"center"}>
+                <Typography variant="body1" textAlign={"center"}>
                     Don’t have an account? <Link className='auth-link' href={"/auth/login"}> Login </Link>
                 </Typography>
 
-                <OutlinedInput
+                <OutlinedInput className="auth-input"
                     startAdornment={
                         <InputAdornment position="start">
                             <EmailIcon />
@@ -48,14 +48,14 @@ const RegisterForm = () => {
                     }
                     placeholder="Enter Your Email" name="email" onChange={(e) => handleLoginForm(e)} />
 
-                <OutlinedInput startAdornment={
+                <OutlinedInput className="auth-input" startAdornment={
                     <InputAdornment position="start">
                         <PersonIcon />
                     </InputAdornment>
                 }
                     placeholder="Enter Username" name="username" onChange={(e) => handleLoginForm(e)} />
 
-                <OutlinedInput type={showPassword ? 'text' : 'password'} startAdornment={
+                <OutlinedInput className="auth-input" type={showPassword ? 'text' : 'password'} startAdornment={
                     <InputAdornment position="start">
                         <LockIcon />
                     </InputAdornment>
@@ -73,7 +73,7 @@ const RegisterForm = () => {
                     }
                     placeholder="Enter Your Password" name="password" onChange={(e) => handleLoginForm(e)} />
 
-                <OutlinedInput type={showPassword ? 'text' : 'password'} startAdornment={
+                <OutlinedInput className="auth-input" type={showPassword ? 'text' : 'password'} startAdornment={
                     <InputAdornment position="start">
                         <LockIcon />
                     </InputAdornment>
