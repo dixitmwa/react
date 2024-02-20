@@ -13,6 +13,7 @@ const ProtectedRoute = ({ children }: any) => {
                 router.push('/auth/login')
             }
         }
+        // eslint-disable-next-line
     }, [])
 
     return (

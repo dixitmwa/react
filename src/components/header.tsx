@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/router';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container'
@@ -32,16 +32,16 @@ const Header = () => {
             <Link href="/"><Image height={100} width={200} src={Logo.src} alt="Logo" /></Link>
           </Box>
           <Box className="menu-list-wrap">
-            <Link className="menu-title-list-wrap" href="/">Home</Link>
-            <Link className="menu-title-list-wrap" href="/#about">About</Link>
-            <Link className="menu-title-list-wrap" href="/#test-category">Test Categories</Link>
-            <Link className="menu-title-list-wrap" href="/#available-test">Available Tests</Link>
-            <Link className="menu-title-list-wrap" href="/#custom-test">Custom Tests</Link>
-            <Link className="menu-title-list-wrap" href="/#desktop-test">Desktop Tests</Link>
-            <Link className="menu-title-list-wrap" href="/#connect">Connect</Link>
+            <Link className={`menu-title-list-wrap ${router.asPath === '/' ? 'active-nav' : ''}`} href="/">Home</Link>
+            <Link  className={`menu-title-list-wrap ${router.asPath.includes('about') ? 'active-nav' : ''}`} href="/#about">About</Link>
+            <Link  className={`menu-title-list-wrap ${router.asPath.includes('test-category') ? 'active-nav' : ''}`} href="/#test-category">Test Categories</Link>
+            <Link  className={`menu-title-list-wrap ${router.asPath.includes('available-test') ? 'active-nav' : ''}`} href="/#available-test">Available Tests</Link>
+            <Link  className={`menu-title-list-wrap ${router.asPath.includes('custom-test') ? 'active-nav' : ''}`} href="/#custom-test">Custom Tests</Link>
+            <Link  className={`menu-title-list-wrap ${router.asPath.includes('desktop-test') ? 'active-nav' : ''}`} href="/#desktop-test">Desktop Tests</Link>
+            <Link  className={`menu-title-list-wrap ${router.asPath.includes('connect') ? 'active-nav' : ''}`} href="/#connect">Connect</Link>
             {
               user &&
-              <Link className="menu-title-list-wrap" href="/profile?tab=user-profile">Profile</Link>
+              <Link  className={`menu-title-list-wrap ${router.asPath.includes('profile') ? 'active-nav' : ''}`} href="/profile?tab=user-profile">Profile</Link>
             }
           </Box>
           {!user ? <Button className='login-btn-warp' onClick={() => router.push('/auth/login')} >

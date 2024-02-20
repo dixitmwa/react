@@ -12,7 +12,6 @@ import YourTest from '@/components/yourTest';
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import FullScreenLoader from '@/common-components/fullScreenLoader'
-import ProtectedRoute from '../auth/ProtectedRoute'
 
 const ProfileDetails = () => {
     const router = useRouter()

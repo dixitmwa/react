@@ -169,3 +169,16 @@
     max-width: 90%;
 
 }
+
+.export-btn-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+    .export-btn{
+        background-color: #69A6D1;
+        height: 37px;
+    }
+}

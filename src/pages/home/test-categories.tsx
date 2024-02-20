@@ -15,11 +15,17 @@ import StroopImg from '../../assets/stroop-effect.png'
 import TOIimg from '../../assets/TOL-test.png'
 import DotWave from '../../assets/dots-wave.png'
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const TestCategories = () => {
+    const router = useRouter()
 
-    const handleReadMore = () => {
-        console.log("read more");
+    const handleReadMore = (title: string) => {
+        router.push(`/test-category?name=${title}`)
+    }
+
+    const handleAvailableTest = (title:string) => {
+        router.push(`/available-test?name=${title}`)
     }
 
     return (
@@ -32,17 +38,17 @@ const TestCategories = () => {
                     <Container className="single-container">
                         <Image height={128} width={128} src={BrainAi.src} alt="brain-ai" />
                         <Typography className="container-title" variant="h5">Memory With AI</Typography>
-                        <CustomButton onBtnClick={() => handleReadMore()} className="test-cat-btn" btnText={"Read More"} endIcon={<Image height={17} width={17} src={SendIcon.src} alt="send" />} />
+                        <CustomButton onBtnClick={() => handleReadMore("Memory With AI")} className="test-cat-btn" btnText={"Read More"} endIcon={<Image height={17} width={17} src={SendIcon.src} alt="send" />} />
                     </Container>
                     <Container className="single-container">
                         <Image height={128} width={128} src={Planning.src} alt="brain-ai" />
                         <Typography className="container-title" variant="h5">Executive function and Planning</Typography>
-                        <CustomButton onBtnClick={() => handleReadMore()} className="test-cat-btn" btnText={"Read More"} endIcon={<Image height={17} width={17} src={SendIcon.src} alt="send" />} />
+                        <CustomButton onBtnClick={() => handleReadMore("Executive function and Planning")} className="test-cat-btn" btnText={"Read More"} endIcon={<Image height={17} width={17} src={SendIcon.src} alt="send" />} />
                     </Container>
                     <Container className="single-container">
                         <Image height={128} width={128} src={SpeedProcessing.src} alt="brain-ai" />
                         <Typography className="container-title" variant="h5">Processing Speed</Typography>
-                        <CustomButton onBtnClick={() => handleReadMore()} className="test-cat-btn" btnText={"Read More"} endIcon={<Image height={17} width={17} src={SendIcon.src} alt="send" />} />
+                        <CustomButton onBtnClick={() => handleReadMore("Processing Speed")} className="test-cat-btn" btnText={"Read More"} endIcon={<Image height={17} width={17} src={SendIcon.src} alt="send" />} />
                     </Container>
                 </Box>
             </Box>
@@ -68,27 +74,27 @@ const TestCategories = () => {
                     <Box className="available-container" pt={4}>
                         <Container>
                             <Image height={240} width={465} src={CardImg.src} alt="card-sort" />
-                            <Typography className="available-title"> card sort test <span><Image height={19} width={19} src={SendGreenIcon.src} alt="next" /></span></Typography>
+                            <Typography className="available-title" onClick={() => handleAvailableTest("card sort test")} >card sort test <span><Image height={19} width={19} src={SendGreenIcon.src} alt="next" /></span></Typography>
                         </Container>
                         <Container>
                             <Image height={240} width={465} src={Nback.src} alt="card-sort" />
-                            <Typography className="available-title"> Nback Test <span><Image height={19} width={19} src={SendGreenIcon.src} alt="next" /></span></Typography>
+                            <Typography className="available-title" onClick={() => handleAvailableTest("Nback Test")} >Nback Test <span><Image height={19} width={19} src={SendGreenIcon.src} alt="next" /></span></Typography>
                         </Container>
                         <Container>
                             <Image height={240} width={465} src={TrailMarketing.src} alt="card-sort" />
-                            <Typography className="available-title"> trail making test <span><Image height={19} width={19} src={SendGreenIcon.src} alt="next" /></span></Typography>
+                            <Typography className="available-title" onClick={() => handleAvailableTest("trail making test")} > trail making test <span><Image height={19} width={19} src={SendGreenIcon.src} alt="next" /></span></Typography>
                         </Container>
                         <Container>
                             <Image height={240} width={465} src={SyllogismsImg.src} alt="card-sort" />
-                            <Typography className="available-title"> Syllogisms Test <span><Image height={19} width={19} src={SendGreenIcon.src} alt="next" /></span></Typography>
+                            <Typography className="available-title" onClick={() => handleAvailableTest("Syllogisms Test")} > Syllogisms Test <span><Image height={19} width={19} src={SendGreenIcon.src} alt="next" /></span></Typography>
                         </Container>
                         <Container>
                             <Image height={240} width={465} src={StroopImg.src} alt="card-sort" />
-                            <Typography className="available-title"> Stroop Effect <span><Image height={19} width={19} src={SendGreenIcon.src} alt="next" /></span></Typography>
+                            <Typography className="available-title" onClick={() => handleAvailableTest("Stroop Effect")} > Stroop Effect <span><Image height={19} width={19} src={SendGreenIcon.src} alt="next" /></span></Typography>
                         </Container>
                         <Container>
                             <Image height={240} width={465} src={TOIimg.src} alt="card-sort" />
-                            <Typography className="available-title"> Tower of London test <span><Image height={19} width={19} src={SendGreenIcon.src} alt="next" /></span></Typography>
+                            <Typography className="available-title" onClick={() => handleAvailableTest("Tower of London test")} > Tower of London test <span><Image height={19} width={19} src={SendGreenIcon.src} alt="next" /></span></Typography>
                         </Container>
                     </Box>
                 </Box>

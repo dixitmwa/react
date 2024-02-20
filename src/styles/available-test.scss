@@ -1,0 +1,60 @@
+.available-test-header-wrap {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    .title {
+        font-size: 26px;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+
+    .content {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 25px;
+        color: #554949;
+        margin: 10px 0 20px 0;
+    }
+
+    .run-test-btn {
+        font-size: 16px;
+        height: 40px;
+        gap: 10px;
+        border-radius: 5px;
+        background: linear-gradient(90deg, #69A6D1 0.79%, #9EADC3 30.39%, #99CA91 75.27%);
+    }
+}
+
+.specification {
+    margin: 40px 0;
+    border: 1px solid #D0CACA;
+    border-radius: 10px;
+    padding: 25px 30px;
+
+    .specification-list {
+        font-size: 16px;
+        font-weight: 400;
+        color: #554949;
+        letter-spacing: 2px;
+    }
+}
+
+.availabe-test-points{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 900px;
+    margin-bottom: 40px;
+}
+
+.available-test-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.available-test-description {
+    font-size: 16px;
+    font-weight: 400;
+    color: #554949;
+}

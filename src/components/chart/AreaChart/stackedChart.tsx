@@ -1,52 +1,52 @@
-import { Box} from '@mui/material';
+import { Box } from '@mui/material';
+import dynamic from 'next/dynamic';
 import React from 'react';
-import Chart from 'react-apexcharts';
+const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
+
 
 const StackedChart = () => {
 
-  const options = {
+  var chartOptions: any = {
     chart: {
-      type: 'area',
+      type: "area",
+      height: 350,
       stacked: true,
     },
+    stroke: {
+      curve: 'smooth'
+    },
+    colors: ['#008FFB', '#00E396', '#CED4DC'],
+    legend: {
+      show: true,
+      position: 'top',
+      horizontalAlign: 'left'
+    },
+
     xaxis: {
-      type: 'datetime',
-      categories: [
-        '2024-02-10T00:00:00.000Z',
-        '2024-02-11T00:00:00.000Z',
-        '2024-02-12T00:00:00.000Z',
-        '2024-02-13T00:00:00.000Z',
-        '2024-02-14T00:00:00.000Z',
-        '2024-02-15T00:00:00.000Z',
-        '2024-02-16T00:00:00.000Z',
-      ],
-    },
-    fill: {
-      opacity: 0.5,
-    },
-  }
-
-  const series = [
+      labels: {
+        formatter: function (value: any) {
+          return value;
+        }
+      }
+    }
+  };
+  const series: any = [
     {
-      name: 'Series A',
-      data: [30, 40, 45, 50, 49, 60, 70],
+      name: 'South',
+      data: [30, 20, 45, 25, 49, 60, 20],
     },
     {
-      name: 'Series B',
-      data: [10, 20, 25, 30, 29, 40, 50],
+      name: 'North',
+      data: [40, 20, 60, 30, 54, 40, 50]
     },
     {
-      name: 'Series C',
-      data: [20, 10, 15, 20, 19, 30, 40],
-    },
+      name: 'Central',
+      data: [20, 10, 15, 20, 19, 30, 40]
+    }
   ]
-
   return (
     <Box id="chart">
-      {/* <Typography variant='h6'>Working in chart...</Typography> */}
-      <div>
-        {/* <Chart options={options} series={series} type="area" height={350} /> */}
-      </div>
+      <Chart options={chartOptions} series={series} height={350} />
     </Box>
   )
 }
