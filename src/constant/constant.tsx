@@ -2,6 +2,12 @@ import HeadGear from '../assets/head-gear.png'
 import ComputerTick from '../assets/computer-with-tick.png'
 import BarGraph from '../assets/graph.png'
 import SecureIcon from '../assets/secure.png'
+import CardImg from '../assets/card-sort.png'
+import Nback from '../assets/Nback.png'
+import TrailMarketing from '../assets/trail-marketing.png'
+import SyllogismsImg from '../assets/syllogisms-tes.png'
+import StroopImg from '../assets/stroop-effect.png'
+import TOIimg from '../assets/TOL-test.png'
 
 export const fiveHours = [
     '0 To 5 Hours',
@@ -64,6 +70,7 @@ export const initialCheckBoxObjects = [
 
         id: 1,
         title: "Is English your first language?",
+        name:"firtsLangEng",
         options: [
             { label: 'Yes', selected: false },
             { label: 'No', selected: false },
@@ -73,6 +80,7 @@ export const initialCheckBoxObjects = [
 
         id: 2,
         title: "Gender",
+        name:"gender",
         options: [
             { label: 'Male', selected: false },
             { label: 'Female', selected: false },
@@ -82,6 +90,7 @@ export const initialCheckBoxObjects = [
 
         id: 3,
         title: "Are you currently taking any medications?",
+        name:"anyMedication",
         options: [
             { label: 'Yes', selected: false },
             { label: 'No', selected: false },
@@ -91,6 +100,7 @@ export const initialCheckBoxObjects = [
 
         id: 4,
         title: "Have you ever had a head injury?",
+        name:"anyHeadInjury",
         options: [
             { label: 'Yes', selected: false },
             { label: 'No', selected: false },
@@ -161,5 +171,45 @@ export const constantData = [
         img: SecureIcon,
         title: "Centralized Secure Database",
         content: "Understand Your Brain and Boost Your Potential. Discover Your Cognitive Profile. Take Control of Your Mental Health. Optimize Your Brain With Quizzes."
+    }
+]
+
+
+export const AllTestAvailable = [
+    {
+        id: 1,
+        title: "Card Sort Test",
+        img: CardImg,
+        category: "Executive"
+    },
+    {
+        id: 2,
+        title: "Nback Test",
+        img: Nback,
+        category: "Memory"
+    },
+    {
+        id: 3,
+        title: "trail making test",
+        img: TrailMarketing,
+        category: "Processing"
+    },
+    {
+        id: 4,
+        title: "Syllogisms Test",
+        img: SyllogismsImg,
+        category: "Processing"
+    },
+    {
+        id: 5,
+        title: "Stroop Effect",
+        img: StroopImg,
+        category: "Memory"
+    },
+    {
+        id: 6,
+        title: "Tower of London test",
+        img: TOIimg,
+        category: "Executive"
     }
 ]

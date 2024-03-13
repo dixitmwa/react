@@ -6,7 +6,8 @@ import EditIcon from '../assets/edit-icon.png'
 import DeleteIcon from '../assets/delete-icon.png'
 import Image from 'next/image'
 
-const UserProfile = () => {
+const UserProfile = (props: any) => {
+    const { profileData } = props
     const [profileImg, setProfileImg] = useState(null)
     const fileInputRef = useRef(null)
 
@@ -32,9 +33,9 @@ const UserProfile = () => {
                         </Box>
                     </Box>
                     <Box className="profile-details-section">
-                        <Typography className='title' >User name: <span className='details-value'>admin</span></Typography>
-                        <Typography className='title'>Email: <span className='details-value'>test@gmail.com</span></Typography>
-                        <Typography className='title' >Age: <span className='details-value'>34</span></Typography>
+                        <Typography className='title' >User name: <span className='details-value'>{profileData?.name}</span></Typography>
+                        <Typography className='title'>Email: <span className='details-value'>{profileData?.email}</span></Typography>
+                        <Typography className='title' >Age: <span className='details-value'>{profileData?.age}</span></Typography>
                     </Box>
                 </Box>
                 <Box className="upload-result">

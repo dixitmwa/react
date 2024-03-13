@@ -12,10 +12,15 @@ import YourTest from '@/components/yourTest';
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import FullScreenLoader from '@/common-components/fullScreenLoader'
+import { useSelector } from 'react-redux'
+import { RootState } from '@/redux/app/store'
 
 const ProfileDetails = () => {
     const router = useRouter()
     const { tab } = router.query;
+
+    const profileData = useSelector((state:RootState) => state.auth?.data?.data?.data)
+
 
     const navMenu = [
         {
@@ -56,7 +61,7 @@ const ProfileDetails = () => {
     const renderComponent = () => {
         switch (currentNav?.title) {
             case 'User Profile':
-                return <UserProfile />;
+                return <UserProfile profileData={profileData} />;
             case 'Profile Form':
                 return <ProfileForm />;
             case 'Your Tests':

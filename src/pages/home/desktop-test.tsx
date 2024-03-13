@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Box, Typography } from "@mui/material";
 import DesktopImg from '../../assets/desktop.png'
 import FeedbackFeedImg from '../../assets/feedback-feed.png'
-import CustomButton from "@/common-components/CustomButton";
+import CustomButton from "@/common-components/customButton";
 import SendIcon from '../../assets/right-arrow.png'
 import EllipseBall from '../../assets/Ellipse-ball.png'
 

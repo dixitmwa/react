@@ -1,32 +1,36 @@
 import { Box, Typography, Container } from "@mui/material";
 import TestCategoryImg from '../../assets/test-category-read.png'
-import CustomButton from "@/common-components/CustomButton";
+import CustomButton from "@/common-components/customButton";
 import SendIcon from '../../assets/right-arrow.png'
 import SendGreenIcon from '../../assets/right-green-arrow.png'
 import BrainAi from '../../assets/brain-ai.png'
 import Planning from '../../assets/planning.png'
 import SpeedProcessing from '../../assets/speed-processing.png'
 import QuizImg from '../../assets/quiz.png'
-import CardImg from '../../assets/card-sort.png'
-import Nback from '../../assets/Nback.png'
-import TrailMarketing from '../../assets/trail-marketing.png'
-import SyllogismsImg from '../../assets/syllogisms-tes.png'
-import StroopImg from '../../assets/stroop-effect.png'
-import TOIimg from '../../assets/TOL-test.png'
 import DotWave from '../../assets/dots-wave.png'
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { useState } from "react";
+import { AllTestAvailable } from "@/constant/constant";
 
 const TestCategories = () => {
     const router = useRouter()
+    const [selectedCategory, setSelectedCategory] = useState("All");
 
     const handleReadMore = (title: string) => {
         router.push(`/test-category?name=${title}`)
     }
 
-    const handleAvailableTest = (title:string) => {
+    const handleAvailableTest = (title: string) => {
         router.push(`/available-test?name=${title}`)
     }
+
+
+    const handleCategoryClick = (category: string) => {
+        setSelectedCategory(category);
+    };
+
+    const filteredTests = selectedCategory === "All" ? AllTestAvailable : AllTestAvailable.filter(test => test.category === selectedCategory);
 
     return (
         <Box className="test-category-wrap" pt={5} id="test-category">
@@ -60,42 +64,27 @@ const TestCategories = () => {
                 <Box className="image-section">
                     <Image height={119} width={98} src={QuizImg.src} alt="quiz" />
                     <Typography className="available-test-title" variant="h5">
-                        All
-                        <span className="custom-style-title">Available Test</span>
+                        All <span className="custom-style-title">Available Test</span>
                     </Typography>
                 </Box>
                 <Box>
                     <Box className="all-nav-bar">
-                        <Typography className="active-nav-title">All</Typography>
-                        <Typography className="nav-title">Memory</Typography>
-                        <Typography className="nav-title">Executive Function</Typography>
-                        <Typography className="nav-title">Processing Speed</Typography>
+                        <Typography className={selectedCategory === "All" ? "active-nav-title" : "nav-title"} onClick={() => handleCategoryClick("All")}>All</Typography>
+                        <Typography className={selectedCategory === "Memory" ? "active-nav-title" : "nav-title"} onClick={() => handleCategoryClick("Memory")}>Memory</Typography>
+                        <Typography className={selectedCategory === "Executive" ? "active-nav-title" : "nav-title"} onClick={() => handleCategoryClick("Executive")}>Executive Function</Typography>
+                        <Typography className={selectedCategory === "Processing" ? "active-nav-title" : "nav-title"} onClick={() => handleCategoryClick("Processing")}>Processing Speed</Typography>
                     </Box>
                     <Box className="available-container" pt={4}>
-                        <Container>
-                            <Image height={240} width={465} src={CardImg.src} alt="card-sort" />
-                            <Typography className="available-title" onClick={() => handleAvailableTest("card sort test")} >card sort test <span><Image height={19} width={19} src={SendGreenIcon.src} alt="next" /></span></Typography>
-                        </Container>
-                        <Container>
-                            <Image height={240} width={465} src={Nback.src} alt="card-sort" />
-                            <Typography className="available-title" onClick={() => handleAvailableTest("Nback Test")} >Nback Test <span><Image height={19} width={19} src={SendGreenIcon.src} alt="next" /></span></Typography>
-                        </Container>
-                        <Container>
-                            <Image height={240} width={465} src={TrailMarketing.src} alt="card-sort" />
-                            <Typography className="available-title" onClick={() => handleAvailableTest("trail making test")} > trail making test <span><Image height={19} width={19} src={SendGreenIcon.src} alt="next" /></span></Typography>
-                        </Container>
-                        <Container>
-                            <Image height={240} width={465} src={SyllogismsImg.src} alt="card-sort" />
-                            <Typography className="available-title" onClick={() => handleAvailableTest("Syllogisms Test")} > Syllogisms Test <span><Image height={19} width={19} src={SendGreenIcon.src} alt="next" /></span></Typography>
-                        </Container>
-                        <Container>
-                            <Image height={240} width={465} src={StroopImg.src} alt="card-sort" />
-                            <Typography className="available-title" onClick={() => handleAvailableTest("Stroop Effect")} > Stroop Effect <span><Image height={19} width={19} src={SendGreenIcon.src} alt="next" /></span></Typography>
-                        </Container>
-                        <Container>
-                            <Image height={240} width={465} src={TOIimg.src} alt="card-sort" />
-                            <Typography className="available-title" onClick={() => handleAvailableTest("Tower of London test")} > Tower of London test <span><Image height={19} width={19} src={SendGreenIcon.src} alt="next" /></span></Typography>
-                        </Container>
+                        {
+                            filteredTests.map((test) => {
+                                return (
+                                    <Container key={test.id}>
+                                        <Image height={240} width={465} src={test.img.src} alt="card-sort" />
+                                        <Typography className="available-title" onClick={() => handleAvailableTest(test.title)} >{test.title} <span><Image height={19} width={19} src={SendGreenIcon.src} alt="next" /></span></Typography>
+                                    </Container>
+                                )
+                            })
+                        }
                     </Box>
                 </Box>
             </Box>

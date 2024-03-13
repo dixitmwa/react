@@ -4,7 +4,7 @@ import Layout from '@/components/layout'
 import { useRouter } from 'next/router';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import StackedChart from '@/components/chart/AreaChart/stackedChart';
-import CustomButton from '@/common-components/CustomButton';
+import CustomButton from '@/common-components/customButton';
 import Image from 'next/image';
 import PdfIcon from '../../../assets/icons/pdfIcon.png'
 import ExcelIcon from '../../../assets/icons/excelIcon.png'
@@ -19,7 +19,6 @@ const View = () => {
     { id: 2, correct: "false", response: "true", responseLat: "1758ms", certainlyRate: "3" },
     { id: 3, correct: "true", response: "false", responseLat: "1572mx", certainlyRate: "3" },
     { id: 4, correct: "false", response: "false", responseLat: "2568mx", certainlyRate: "3" },
-    // { id: 5, correct: "true", response: "true", responseLat: "1919mx", certainlyRate: "3" }
   ]
 
   const rows = [
@@ -48,6 +47,7 @@ const View = () => {
             </Grid>
             <Grid item xs={7}>
               <Typography variant='h6' textAlign={"center"} mb={2} fontWeight={600} fontSize={16}>Results for Syllogisms Test for participant admin</Typography>
+              <Box className="cus-table-wrap">
               <TableContainer component={Paper}>
                 <Table>
                   <TableHead >
@@ -74,9 +74,11 @@ const View = () => {
                   </TableBody>
                 </Table>
               </TableContainer>
+              </Box>
               <Typography variant='subtitle1' textAlign={"center"} fontSize={14} mt={2}>Total Correct Count:Your performance did not fall within the average range for someone your age. There are a large number of factors that may have contributed to your performance. This test is not diagnostic. There are a range of scores and some will be above and some will be below average. If you have any concerns about your performance you might consider consulting with a licensed professional health provider. Your results can be printed and provided to anyone you consult with.</Typography>
             </Grid>
             <Grid item xs={9}>
+            <Box className="cus-table-wrap">
               <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
                   <TableHead>
@@ -105,6 +107,7 @@ const View = () => {
                   </TableBody>
                 </Table>
               </TableContainer>
+              </Box>
             </Grid>
             <Grid item xs={3} className='export-btn-wrap'>
               <CustomButton className="export-btn" btnText="Export to PDF" startIcon={<Image height={20} width={20} src={PdfIcon.src} alt='pdf-icon' />} />
